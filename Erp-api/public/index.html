@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ERP Suite - Sign In</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="login-page">
+    <main class="shell">
+      <section class="brand">
+        <div class="brand-badge">ERP Suite</div>
+        <h1>Super Admin Command Center</h1>
+        <p>
+          Secure access to every module in the ERP. Manage users, assign roles,
+          and unlock full system control from one secure login.
+        </p>
+        <div class="feature-list">
+          <div class="feature">
+            <span class="feature-dot"></span>
+            Full dashboard access and system settings
+          </div>
+          <div class="feature">
+            <span class="feature-dot"></span>
+            Users, roles, inventory, sales, purchases, accounts
+          </div>
+          <div class="feature">
+            <span class="feature-dot"></span>
+            All reports with real-time visibility
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="card">
+          <h2>Sign in</h2>
+          <p class="muted">Use your company credentials to continue.</p>
+
+          <form id="loginForm">
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="admin@company.com" required />
+            </div>
+            <div class="form-field">
+              <label for="password">Password</label>
+              <input id="password" name="password" type="password" placeholder="Enter your password" required />
+            </div>
+
+            <div class="actions">
+              <label class="checkbox">
+                <input type="checkbox" id="remember" />
+                Remember me
+              </label>
+              <button type="submit">Sign in</button>
+            </div>
+
+            <div class="status" id="status"></div>
+          </form>
+
+          <div class="helper">
+            No database yet? Open the
+            <a href="dashboard.html?mock=1">demo dashboard</a>.
+          </div>
+        </div>
+        <div class="trust">Protected by JWT + role based access control</div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

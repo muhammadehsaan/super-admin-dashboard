@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ERP Suite - Super Admin</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="dashboard">
+    <header class="topbar">
+      <div class="brand-mark">
+        <span>ERP Suite</span>
+        <strong>Super Admin</strong>
+      </div>
+      <div class="search">
+        <input type="search" placeholder="Search users, roles, modules" />
+      </div>
+      <div class="user-card">
+        <div class="avatar" id="avatar">SA</div>
+        <div>
+          <div id="userName">Super Admin</div>
+          <div class="badge" id="userRole">Full Control</div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-card">
+        <div class="badge teal" id="modeBadge">Live Mode</div>
+        <h2 id="welcomeTitle">Welcome back, Super Admin</h2>
+        <p id="welcomeNote">
+          You have complete visibility across users, roles, inventory, sales,
+          purchases, accounts, and system settings.
+        </p>
+        <div class="action-list">
+          <div class="action-item">
+            <span>Create a new user</span>
+            <button class="secondary" id="createUserBtn">New User</button>
+          </div>
+          <div class="action-item">
+            <span>Create or update roles</span>
+            <button class="secondary" id="createRoleBtn">Manage Roles</button>
+          </div>
+          <div class="action-item">
+            <span>Review all reports</span>
+            <button class="secondary" id="viewReportsBtn">Reports</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>System Snapshot</h3>
+        <div class="stat-grid" id="statGrid">
+          <div class="stat-card">
+            <h4>Total Users</h4>
+            <strong id="statUsers">0</strong>
+          </div>
+          <div class="stat-card">
+            <h4>Active Roles</h4>
+            <strong id="statRoles">0</strong>
+          </div>
+          <div class="stat-card">
+            <h4>Open Orders</h4>
+            <strong id="statOrders">0</strong>
+          </div>
+          <div class="stat-card">
+            <h4>Pending Approvals</h4>
+            <strong id="statApprovals">0</strong>
+          </div>
+        </div>
+        <p class="notice" id="statusNotice"></p>
+      </div>
+    </section>
+
+    <section class="grid-two">
+      <div class="panel-card">
+        <h3>Permissions</h3>
+        <div class="chips" id="permissionChips"></div>
+      </div>
+
+      <div class="panel-card">
+        <h3>Roles</h3>
+        <div class="chips" id="roleChips"></div>
+      </div>
+    </section>
+
+    <section class="grid-two">
+      <div class="panel-card">
+        <h3>Module Access</h3>
+        <div class="action-list">
+          <div class="action-item"><span>Inventory</span><button>Open</button></div>
+          <div class="action-item"><span>Sales</span><button>Open</button></div>
+          <div class="action-item"><span>Purchases</span><button>Open</button></div>
+          <div class="action-item"><span>Accounts</span><button>Open</button></div>
+          <div class="action-item"><span>Reports</span><button>Open</button></div>
+          <div class="action-item"><span>System Settings</span><button>Open</button></div>
+        </div>
+      </div>
+
+      <div class="panel-card">
+        <h3>Session</h3>
+        <div class="action-list">
+          <div class="action-item">
+            <span>Session status</span>
+            <div class="badge" id="sessionStatus">Offline</div>
+          </div>
+          <div class="action-item">
+            <span>Token</span>
+            <button class="secondary" id="copyToken">Copy</button>
+          </div>
+          <div class="action-item">
+            <span>Sign out</span>
+            <button class="secondary" id="signOut">Sign out</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>

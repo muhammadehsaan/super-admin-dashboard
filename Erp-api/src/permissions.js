@@ -1,0 +1,51 @@
+const PERMISSIONS = {
+  USERS_CREATE: "users:create",
+  USERS_EDIT: "users:edit",
+  USERS_DELETE: "users:delete",
+  USERS_VIEW: "users:view",
+  ROLES_CREATE: "roles:create",
+  ROLES_EDIT: "roles:edit",
+  ROLES_DELETE: "roles:delete",
+  INVENTORY_MANAGE: "inventory:manage",
+  SALES_MANAGE: "sales:manage",
+  ACCOUNTS_MANAGE: "accounts:manage",
+  REPORTS_VIEW: "reports:view",
+  SETTINGS_ACCESS: "settings:access",
+  DASHBOARD_ACCESS: "dashboard:access",
+  PROFILE_VIEW: "profile:view",
+  PROFILE_EDIT: "profile:edit",
+};
+
+const PERMISSION_LIST = Object.values(PERMISSIONS);
+
+const ROLE_PERMISSIONS = {
+  super_admin: PERMISSION_LIST,
+  admin: [
+    PERMISSIONS.USERS_CREATE,
+    PERMISSIONS.USERS_EDIT,
+    PERMISSIONS.USERS_VIEW,
+    PERMISSIONS.INVENTORY_MANAGE,
+    PERMISSIONS.SALES_MANAGE,
+    PERMISSIONS.REPORTS_VIEW,
+    PERMISSIONS.DASHBOARD_ACCESS,
+  ],
+  manager: [
+    PERMISSIONS.USERS_VIEW,
+    PERMISSIONS.INVENTORY_MANAGE,
+    PERMISSIONS.SALES_MANAGE,
+    PERMISSIONS.REPORTS_VIEW,
+    PERMISSIONS.DASHBOARD_ACCESS,
+  ],
+  accountant: [
+    PERMISSIONS.ACCOUNTS_MANAGE,
+    PERMISSIONS.REPORTS_VIEW,
+    PERMISSIONS.DASHBOARD_ACCESS,
+  ],
+  employee: [
+    PERMISSIONS.DASHBOARD_ACCESS,
+    PERMISSIONS.PROFILE_VIEW,
+    PERMISSIONS.PROFILE_EDIT,
+  ],
+};
+
+module.exports = { PERMISSIONS, PERMISSION_LIST, ROLE_PERMISSIONS };
